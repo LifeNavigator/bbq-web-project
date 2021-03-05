@@ -1,0 +1,176 @@
+/*--- Utility classes ---*/
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #404040;
+}
+
+
+/*--- Typography ---*/
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: white;
+    margin: 2em 0;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+h2+p {
+    font-weight: 900;
+    color: #f18119;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+.intro p {
+    color: #f18119;
+    font-weight: 900;
+}
+
+.intro h1>span {
+    font-weight: 900;
+}
+
+.top-text {
+    font-size: 0.725rem;
+    order: -1;
+    /* border-top: 3px solid #f18119; */
+    margin: 0;
+    padding: 2px;
+    border-top: 5px solid #F18119;
+}
+
+/*--- Other classes ---*/
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    background-color: #404040;
+    background-image: url(./images/dark-ribs.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 0.5em 1em;
+}
+
+.main-content p {
+    margin-bottom: .5em;
+}
+
+/* ----- form section ----- */
+.form-content {
+    width: 60%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .7em;
+    /* border: 1px solid salmon; */
+}
+
+.form-content input,
+.form-content .btn {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.form-content input {
+
+    margin-bottom: .75em;
+    padding: .25em 2em;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    font-family: inherit;
+    text-align: inherit;
+}
+
+.form-content .btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to left, #ff713b, #ffa51d);
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+.btn-primary:hover {
+    color: #404040;
+    background: linear-gradient(to right, #ff713b, #ffa51d);
+}
+
+/* ----- media queries ---- */
+
+@media (min-width: 500px) {
+
+    * {}
+
+    body {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h1+p {
+        font-size: 1.75rem;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    .intro>*,
+    .main-content>* {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .main-content {
+        padding: 0 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .form-content .btn {
+        max-width: 60%;
+    } */
+}
